@@ -1,0 +1,1 @@
+How to Connect ChiroFusion to ChatGPT and Claude via MCP
