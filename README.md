@@ -114,6 +114,70 @@ python3 chirofusion_agent.py tools     # list Cotlet.dev tools
 python3 chirofusion_agent.py serve     # start the stdio MCP server (same as no argument)
 ```
 
+## What you can ask your AI to do in ChiroFusion
+
+These are real jobs ChiroFusion users asked about. Cotlet lets ChatGPT, Claude or any MCP client do them in your own signed-in ChiroFusion account.
+
+### Insurance and claims
+
+#### Can ChatGPT or Claude match an EOB to my open claims and post the insurance checks in ChiroFusion?
+
+Yes. ChiroFusion has EOB Posting & ERAs under Billing, which you use by hand. With Cotlet, ChatGPT or Claude reads the EOB, matches it to your open claims in your signed-in account and prepares the posting on each one. Nothing is posted until you say yes.
+
+Ask your agent: "Match this EOB to the open claims in ChiroFusion and list what to post on each. Post after my OK."
+
+#### Can ChatGPT or Claude list my outstanding claims over 30 days in ChiroFusion by payer?
+
+Yes. With Cotlet, your agent reads Billing & Claims Management in your signed-in ChiroFusion account and lists claims outstanding over the days you choose, by payer, with the last status and the oldest first.
+
+Ask your agent: "List outstanding claims over 30 days in ChiroFusion by payer with the last status, oldest first."
+
+As an API endpoint: Yes. Save the claims check as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier to get the list by email.
+
+### Patients and rebooking
+
+#### Can ChatGPT or Claude find patients with an old balance in ChiroFusion and draft a statement message for each?
+
+Yes. ChiroFusion works with MailMyStatements for statements, which you run by hand. With Cotlet, your agent lists patients with a balance older than the days you choose and drafts a statement message for each. Nothing is sent until you say yes.
+
+Ask your agent: "List ChiroFusion patients with a balance older than 60 days and draft a statement message for each. Send nothing yet."
+
+As an API endpoint: Yes. Save the balance list as an endpoint in Cotlet and call it monthly from n8n, Make or Zapier.
+
+#### Can ChatGPT or Claude find this week's no-shows in ChiroFusion who have no next visit and draft a rebooking text?
+
+Yes. ChiroFusion sends text reminders on its own. With Cotlet, your agent reads the scheduler in your signed-in account, finds patients who no-showed this week with no next visit and drafts a rebooking text for each. Cotlet does not send texts itself, and nothing goes out until you say yes.
+
+Ask your agent: "Who no-showed this week in ChiroFusion and has no next visit? Draft a rebooking text for each."
+
+As an API endpoint: Yes. Save the no-show list as an endpoint in Cotlet and call it every Friday from n8n, Make or Zapier.
+
+#### Can ChatGPT or Claude tell me which patients booked for tomorrow have not finished their ChiroFusion online intake?
+
+Yes. With Cotlet, your agent reads tomorrow's scheduler and the online intake forms in your signed-in ChiroFusion account, lists patients who have not finished and drafts a reminder for each. Nothing is sent until you say yes.
+
+Ask your agent: "Which patients booked for tomorrow in ChiroFusion have not finished the online intake? Draft a reminder for each."
+
+As an API endpoint: Yes. Save the unfinished-intake list as an endpoint in Cotlet and call it every afternoon from n8n, Make or Zapier.
+
+#### Can ChatGPT or Claude book patients into ChiroFusion from my website form or a phone AI?
+
+Yes. ChiroFusion has no public API. With Cotlet, a form or phone assistant calls your own endpoint and your agent books the visit on the scheduler in your signed-in ChiroFusion account and returns the time. Nothing is booked in chat until you say yes.
+
+Ask your agent: "Book this caller into the first free slot on Tuesday with Dr Smith in ChiroFusion and confirm the time."
+
+As an API endpoint: Yes. Save the booking step as an endpoint in Cotlet and call it from your website form, a phone AI, n8n, Make or Zapier whenever a request arrives.
+
+### Reports for your accountant
+
+#### Can ChatGPT or Claude put this month's ChiroFusion visits and collections by provider in a sheet for my accountant?
+
+Yes. ChiroFusion reports export to Excel or PDF, which you run by hand. With Cotlet, your agent runs the reports in your signed-in account and puts visits and collections by provider in a Google Sheet. Nothing is added until you say yes.
+
+Ask your agent: "Put this month's ChiroFusion visits and collections by provider in a sheet for my accountant."
+
+As an API endpoint: Yes. Save the monthly report as an endpoint in Cotlet and call it on the first of each month from n8n, Make or Zapier to fill the sheet.
+
 ## Questions from ChiroFusion users
 
 **Does ChiroFusion have an API?**
